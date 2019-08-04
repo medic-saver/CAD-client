@@ -22,11 +22,11 @@ export default function Navigation() {
           <AppBar position="static">
             <Toolbar>
               <Typography variant="h6" className={classes.title}>
-                Medic Saver
+                Clinician Analytics
               </Typography>
               <Button color="inherit" component={Link} to="/admin-view">Admin View</Button>
               <Button color="inherit" component={Link} to="/officer-view">Officer View</Button>
-              <Button color="inherit" component={Link} to="/medic-view">Medic View</Button>
+              <Button color="inherit" component={Link} to="/clinician-view">Clinician View</Button>
             </Toolbar>
           </AppBar>
         </div>
