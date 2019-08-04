@@ -1,6 +1,6 @@
 import React from "react";
 import FileUploadForm from "../components/forms/FileUploadForm";
-import CalendarHeatmap from "../components/visualizations/CalendarHeatmap";
+import CalendarHeatmap from "../components/visualizations/clinician/CalendarHeatmap";
 
 export default function OfficerView() {
   return (
