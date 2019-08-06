@@ -1,38 +1,34 @@
-import React from "react";
-import { ResponsiveCalendar } from "@nivo/calendar";
-import { monthlyHeatmapData } from '../../../formData/monthlyHeatmapData';
+import React, { Component } from 'react';
+import * as d3 from "d3";
 
-// make sure parent container have a defined height when using
-// responsive component, otherwise height will be 0 and
-// no chart will be rendered.
-// website examples showcase many properties,
-// you'll often use just a few of them.
-export default function monthlyHeatmap() {
-  return (
-    <div style={{ height: "250px" }}>
-      <ResponsiveCalendar
-        data={monthlyHeatmapData}
-        from="2019-04-01"
-        to="2019-04-30"
-        emptyColor="#eeeeee"
-        colors={["#61cdbb", "#97e3d5", "#e8c1a0", "#f47560"]}
-        margin={{ top: 40, right: 40, bottom: 40, left: 40 }}
-        monthBorderColor="#ffffff"
-        dayBorderWidth={2}
-        dayBorderColor="#ffffff"
-        legends={[
-          {
-            anchor: "bottom-right",
-            direction: "row",
-            translateY: 36,
-            itemCount: 4,
-            itemWidth: 42,
-            itemHeight: 36,
-            itemsSpacing: 14,
-            itemDirection: "right-to-left"
-          }
-        ]}
-      />
-    </div>
-  );
+class BarChart extends Component {
+  componentDidMount() {
+    this.drawChart();
+  }
+    
+  drawChart() {
+    const data = [12, 5, 6, 6, 9, 10];
+    
+    const svg = d3.select("body")
+    .append("svg")
+    .attr("width", 700)
+    .attr("height", 300)
+    .style("margin-left", 100);
+                  
+    svg.selectAll("rect")
+      .data(data)
+      .enter()
+      .append("rect")
+      .attr("x", (d, i) => i * 70)
+      .attr("y", (d, i) => 300 - 10 * d)
+      .attr("width", 65)
+      .attr("height", (d, i) => d * 10)
+      .attr("fill", "green")
+  }
+        
+  render(){
+    return <div id={"#" + this.props.id}></div>
+  }
 }
+    
+export default BarChart;
