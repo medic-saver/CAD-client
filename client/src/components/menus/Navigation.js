@@ -22,7 +22,7 @@ export default function Navigation() {
           <AppBar position="static">
             <Toolbar>
               <Typography variant="h6" className={classes.title}>
-                Clinician Analytics
+                Clinician Analytics Dashboard
               </Typography>
               <Button color="inherit" component={Link} to="/admin-view">Admin View</Button>
               <Button color="inherit" component={Link} to="/officer-view">Officer View</Button>
