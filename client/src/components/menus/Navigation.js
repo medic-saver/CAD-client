@@ -27,6 +27,7 @@ export default function Navigation() {
               <Button color="inherit" component={Link} to="/admin-view">Admin View</Button>
               <Button color="inherit" component={Link} to="/officer-view">Officer View</Button>
               <Button color="inherit" component={Link} to="/clinician-view">Clinician View</Button>
+              <Button color="inherit" component={Link} to="/system-view">System View</Button>
             </Toolbar>
           </AppBar>
         </div>
