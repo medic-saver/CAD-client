@@ -17,10 +17,10 @@ def upload_data():
         # for row in csvreader:
         #     data = Data(id=row[0], last_name=row[1])
 
-            db.session.add(data)
-            db.session.commit()
+        db.session.add(data)
+        db.session.commit()
 
-            return 'Done', 201
+        return 'Done', 201
 
 @main.route('/data')
 def data():

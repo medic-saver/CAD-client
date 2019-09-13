@@ -1,6 +1,18 @@
 version: '3'
 
 services:
+  # server:
+  #   container_name: flask
+  #   build:
+  #     context: ./server/backend/
+  #     dockerfile: Dockerfile
+  #   volumes:
+  #     - ./server/backend:/usr/src/app
+  #     - /usr/src/app/node_modules
+  #   environment:
+  #     NODE_ENV: development
+  #   ports:
+  #     - 5000:5000
   client:
     container_name: ca-client-dev
     build:
