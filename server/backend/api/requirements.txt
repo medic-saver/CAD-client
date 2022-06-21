@@ -8,7 +8,7 @@ joblib==0.13.2
 lml==0.0.9
 MarkupSafe==1.1.1
 mock==3.0.5
-numpy==1.17.1
+numpy==1.22.0
 pandas==0.25.1
 patsy==0.5.1
 pyexcel==0.5.15
